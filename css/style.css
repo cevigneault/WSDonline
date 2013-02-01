@@ -5,6 +5,7 @@ body {
 	color: #afafaf;
 	background: url('../images/bg_trigun.jpg') fixed no-repeat;
 	margin: 0 auto;
+	height: 100%;
 }
 body> div {
 	margin: 0;
@@ -17,28 +18,28 @@ a {
 	font-size: 1.2em;
 	text-decoration: none;
 }
-a:link, #characters footer a:link{
+a:link, #characters footer a:link, #contact_page a:link {
 	background: url(../images/button_gradient.jpg) repeat-x;
 	border: 2px solid #fff;
 	border-radius: 10px;
 	color: #fff;
 	padding: 2px 5px;
 }
-a:visited, #characters footer a:visited {
+a:visited, #characters footer a:visited, #contact_page a:visited {
 	color: #333;
 	border: 2px solid #fff;
 }
-a:hover, #characters footer a:hover {
+a:hover, #characters footer a:hover, #contact_page a:hover {
 	background: url(../images/button_gradient.jpg) repeat-x, rgba(255,0,0,0.70);
 	
 }
-a:active, #characters footer a:active {
+a:active, #characters footer a:active, #contact_page a:active {
 	color: #f00;
 	border: 2px solid #f00;
 }
 nav ul{
-	width: 450px;
-	margin:0 10% 0 45%; /*450px*/
+	width: 600px;
+	margin:0 10% 0 40%; /*450px*/
 	list-style-type: none;
 	padding: 0;
 	overflow: hidden;
@@ -55,23 +56,37 @@ nav a {
 	line-height: 1.563em;/*25px;*/
 	text-align: center;
 }
-/*------------------------Main content----------------------------*/
-#plot  {
-	-moz-column-count: 3;
-	-webkit-column-count: 3;
+#signup a {
+	display: block;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #55f;
+	color: #55f;
+	font-size: 0.75em;
+	background: none;
+	clear: left;
+	width: 195px;
 }
+/*------------------------Main content----------------------------*/
 header img {
 	margin: 0 15%; /*150px*/
 	width: 66.5%;
 }
-h1, h2, h3 {
+h1, h2, h3, h4 {
 	font-family: 'Marko One', serif;
 	border-bottom: 1px solid #f00;
 }
-
+h4 {
+	font-size: 1.3em;
+}
 strong {
 	font-family: 'Della Respira', serif;
 	color: #e68243;
+}
+#plot div {
+	-moz-column-count: 3;
+	-webkit-column-count: 3;
 }
 #plot footer {
 	display: block;
@@ -79,8 +94,6 @@ strong {
 	background: none;
 	margin: 0;
 }
-
-
 #characters li {
 	float: left;
 	text-align: center;
@@ -90,7 +103,6 @@ strong {
 	list-style-type: none;
 	margin: 20px;
 }
-
 #characters a {
 	padding: 0;
 	background: none;
@@ -98,7 +110,7 @@ strong {
 	border-radius: 10px;
 	display: block;
 }
-#characters footer {
+#characters footer, #contact_page footer, #plot footer, #table footer {
 	display: block;
 	background: none;
 	text-align: right;
@@ -108,6 +120,32 @@ strong {
 #characters footer a:link {
 	clear: left;
 	display: inline;
+}
+/*#signup div {
+	float: left;
+	margin-left: 1%;
+}*/
+/*-----------------------Table----------------------------------*/
+table {
+	border-collapse: collapse;
+}
+th {
+	border: 2px solid #f00;
+	font-size: 1.25em;
+}
+td {
+	border: 2px solid #f00;
+	padding: 5px;
+}
+td:nth-child(2n-1) {
+	text-align: center;
+}
+td p {
+	text-align: left;
+	padding: 0;
+}
+tr:nth-child(even) {
+	background-color: #333;
 }
 /*-----------------------Footer---------------------------------*/
 footer {
@@ -146,6 +184,38 @@ article footer {
 	border: none;
 	padding: 20px 0;
 }
+/*-----------------------Contact page--------------------------*/
+form.contact {
+	margin: 0 auto;
+	padding: 10%;
+	width: 454px;
+}
+form.contact div {
+	margin-bottom: 5px;
+}
+form.contact label.fixedwidth {
+	display: block;
+	width: 210px;
+	float: left;
+	margin-right: 42px;
+}
+form.contact p {
+	display: inline;
+}
+form.contact input:focus {
+	background: #ffe0b1;
+}
+input[type=submit] {
+	background: url(../images/button_gradient.jpg) repeat-x;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	color: #323232;
+	font-size: 1em;
+	width: 125px;
+	padding: 2px 5px;
+	margin-bottom: 10px; 
+
+}
 /*-----------------------Media Queries-------------------------*/
 
 	/* Tablet Portrait Size to standard 960 (devices and browsers) */
@@ -166,6 +236,7 @@ article footer {
 	@media only screen and (min-width: 480px) and (max-width: 767px) {
 		nav ul {
 			margin: 0 auto;
+			width: 300px;
 		
 		}
 		header img {
@@ -196,6 +267,11 @@ article footer {
 		article:nth-child(even) img {
 			float: none;
 		}
+		/*--------------------------Contact page--------------------------*/
+		form.contact {
+			margin: 0 auto;
+			padding: 1%;
+		}
 }
 	/* Mobile Portrait Size to Mobile Landscape Size (devaices and browsers) */
 	@media only screen and (max-width: 479px) {
@@ -216,7 +292,6 @@ article footer {
 		header img {
 			display: none;
 		}
-
 		nav ul {
 			margin: 0;
 			width: 100%;
@@ -244,7 +319,7 @@ article footer {
 			float: none;
 			margin: 15px 5%;
 		}
-		#characters footer a:link {
+		#characters footer a:link, #contact_page footer a:link {
 			border-radius: 0;
 			display: block;
 			height: 25px;
@@ -269,4 +344,30 @@ article footer {
 		article footer {
 			text-align: center;
 		}
+		/*--------------------------Contact page--------------------------*/
+		form.contact {
+			margin: 0 auto;
+			padding: .5%;
+		}
+		form.contact label.fixedwidth {
+			width: 95%;
+		}
+		form.contact #name_first, form.contact #name_last, form.contact #email {
+			width: 95%;
+		}
+		form.contact #phone, form.contact #phone-1, form.contact #phone-2 {
+			width: 25%;
+		}
+		form.contact p {
+			width: 3%;
+		}
+		input[type=submit] {
+			display: block;
+			width: 100%;
+			background: url(../images/button_gradient.jpg) repeat-x;
+			border: 2px solid #fff;
+			border-radius: 0;
+			color: #323232;
+			padding: 2px 5px;
+			margin: 10px 0 20px 0;		}
 }

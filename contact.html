@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Contact Us</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href='http://fonts.googleapis.com/css?family=Domine|Marko+One|Della+Respira' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<div id="contact_page">
+			<h1>Contact Us</h1>
+			<p>For any questions, comments, concerns, just fill out the form below and we'll get back to you as soon as we can.</p>
+			<form class="contact" method="post" action="index.html">
+				<div>
+					<label for="name_first" class="fixedwidth">First Name</label>
+					<input type="text" name="name_first" id="name_first"/>
+				</div>
+				<div>
+					<label for="name_last" class="fixedwidth">Last Name</label>
+					<input type="text" name="name_last" id="name_last"/>
+				</div>
+				<div>
+					<label for="phone" class="fixedwidth">Phone Number</label>
+					<span><input type="tel" name="phone" id="phone" size="3" maxlength="3"/></span>
+					<p>-</p>
+					<span><input type="tel" name="phone" id="phone-1" size="3" maxlength="3"/></span>
+					<p>-</p>
+					<span><input type="tel" name="phone" id="phone-2" size="4" maxlength="4"/></span>
+			  	</div>
+			  	<div>
+			  		<label for="email" class="fixedwidth">Email Address</label>
+			  		<input type="email" name="email" id="email"/>
+				</div>
+			  	<div>
+			  		<label for="regarding">Regarding</label>
+			  	</div>
+			  	<div>
+			  		<select name="regarding" id="regarding">
+			  			<option>General Inquiry</option>
+			  			<option>Suggestion</option>
+			  			<option>Site Error</option>
+			  			<option>Legal</option>
+			  			<option>Press</option>
+			  		</select>
+			  	</div>
+			  	<div>
+			  		<label for="message">Message</label>
+			  		<br/>
+			  		<textarea rows="15" cols="50" name="message" id="message"></textarea>
+			  	</div>
+			  	<div>
+			  		<input type="checkbox" name="contact_phone" id="contact_phone">
+			  		<p>I prefer to be contacted by phone.</p>
+			  	</div>
+			  	<div>
+			  		<input type="submit" value="Submit" onclick="javascript:alert('Thanks')"/>
+			  	</div>
+			  </form>
+			  <footer>
+				  <a href="index.html">Back to Site</a>
+			  </footer>
+		</div><!-- - - - - - - - - end Contact_page div - - - - - - - - - - - -->
+		<footer>
+			<p>All images Copyright their respective owners. Site design &copy; 2013 CEVigneault@fullsail.edu</p>
+		</footer>
+	</body>
+</html>
